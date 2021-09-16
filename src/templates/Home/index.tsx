@@ -3,7 +3,7 @@ import Logo from 'components/Logo'
 import Link from 'next/link'
 import Base from 'templates/Base'
 
-const Home = () => {
+const HomeTemplate = () => {
   return (
     <Base>
       <VStack m="auto" spacing="40">
@@ -41,4 +41,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomeTemplate

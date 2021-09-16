@@ -7,7 +7,10 @@ export type BaseTemplateProps = {
   children: React.ReactNode
 }
 
-const Base = ({ children, title = 'Burger App' }: BaseTemplateProps) => {
+const BaseTemplate = ({
+  children,
+  title = 'Burger App'
+}: BaseTemplateProps) => {
   return (
     <VStack backgroundColor="yellow.500">
       <Head>
@@ -15,11 +18,11 @@ const Base = ({ children, title = 'Burger App' }: BaseTemplateProps) => {
       </Head>
       <Container
         maxW="container.xl"
-        border="4px"
-        borderColor="purple.500"
+        border="4px" // just for dev
+        borderColor="purple.500" //just for dev
         centerContent
         h="100vh"
-        p="10"
+        p="0"
       >
         {children}
       </Container>
@@ -27,4 +30,4 @@ const Base = ({ children, title = 'Burger App' }: BaseTemplateProps) => {
   )
 }
 
-export default Base
+export default BaseTemplate

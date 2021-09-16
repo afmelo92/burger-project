@@ -1,8 +1,8 @@
-import { Heading } from '@chakra-ui/react'
 import type { NextPage } from 'next'
+import MenuTemplate from 'templates/Menu'
 
 const MenuPage: NextPage = () => {
-  return <Heading>Menu</Heading>
+  return <MenuTemplate />
 }
 
 export default MenuPage
