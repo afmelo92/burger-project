@@ -26,7 +26,6 @@ class MyDocument extends Document {
           <meta name="description" content="Order your food by yourself" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
-
           {/** 
            * PWA SETTINGS
             <meta name='apple-mobile-web-app-capable' content='yes' />
