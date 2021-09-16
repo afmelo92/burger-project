@@ -1,13 +1,18 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/tests/helpers'
 
 import Logo from '.'
 
 describe('<Logo />', () => {
-  it('should render properly', () => {
-    render(<Logo />)
+  beforeEach(() => {
+    document.getElementById('chakra-toast-portal')?.remove()
+  })
 
-    expect(
-      screen.getByRole('heading', { name: /burger app/i })
-    ).toBeInTheDocument()
+  it('should render with small size by default', () => {
+    const { debug } = renderWithTheme(<Logo />)
+
+    debug()
+
+    expect(screen.getByRole('img').parentElement).toHaveAttribute('width', '20')
   })
 })

@@ -12,7 +12,8 @@ module.exports = {
     '!src/types/**/*.d.ts',
     '!src/graphql/**/*.ts',
     '!src/**/mock.ts',
-    '!src/theme/*.ts'
+    '!src/theme/*.ts',
+    '!src/utils/*.ts'
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/', '<rootDir>/.jest']

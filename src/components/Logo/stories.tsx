@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/react'
+import { Meta, Story } from '@storybook/react'
 import React from 'react'
 
 import Logo from '.'
@@ -9,4 +9,4 @@ export default {
 } as Meta
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-export const Primary: React.VFC<{}> = args => <Logo {...args} />
+export const Primary: Story<{}> = args => <Logo {...args} />
