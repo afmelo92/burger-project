@@ -12,11 +12,12 @@ const MenuButton = ({ title, icon }: MenuButtonProps) => {
       w="full"
       h="full"
       maxW="180px"
-      maxH="180px"
+      maxH={{ base: '150px', md: '180px' }}
       py="30px"
       px="10px"
       _hover={{ opacity: '80%' }}
       backgroundColor="yellow.500"
+      colorScheme="yellow"
     >
       <VStack>
         {icon}

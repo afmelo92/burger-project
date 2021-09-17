@@ -18,10 +18,10 @@ const BaseTemplate = ({
       </Head>
       <Container
         maxW="container.xl"
-        border="4px" // just for dev
-        borderColor="purple.500" //just for dev
+        // border="4px" // just for dev
+        // borderColor="purple.500" //just for dev
         centerContent
-        h="100vh"
+        h={{ base: '100%', md: '100vh' }}
         p="0"
       >
         {children}
