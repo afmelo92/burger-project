@@ -38,7 +38,6 @@ const MenuTemplate = () => {
         </VStack>
 
         <SimpleGrid
-          // border="4px"
           // p={{ base: '2px', md: '10px' }}
           w="full"
           columns={{ base: 1, md: 2, lg: 3 }}

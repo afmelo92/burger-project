@@ -1,11 +1,15 @@
 import { VStack, Button, Heading, Container } from '@chakra-ui/react'
 import Logo from 'components/Logo'
 import Link from 'next/link'
-import Base from 'templates/Base'
 
 const HomeTemplate = () => {
   return (
-    <Container centerContent h="100vh" backgroundColor="yellow.500">
+    <Container
+      centerContent
+      h="100vh"
+      backgroundColor="yellow.500"
+      maxW="100vw"
+    >
       <VStack m="auto" spacing="80px">
         <Heading
           m="auto"
