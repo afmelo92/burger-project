@@ -13,8 +13,8 @@ const SideMenu = () => {
       aria-label="menu lateral"
       maxW="200px"
       maxH="90%"
-      h={{ base: '100%', md: 'full' }}
-      // position={{ base: 'sticky' }}
+      // h={{ base: '100%', md: 'full' }}
+      // position={{ base: 'fixed' }}
       // border="2px"
       // borderColor="red.400"
     >

@@ -21,7 +21,7 @@ const BaseTemplate = ({
         // border="4px" // just for dev
         // borderColor="purple.500" //just for dev
         centerContent
-        h={{ base: '100%', md: '100vh' }}
+        h="100vh"
         p="0"
         // overflow="hidden"
       >

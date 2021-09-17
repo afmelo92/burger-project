@@ -4,24 +4,24 @@ import { Heading, Text, VStack } from '@chakra-ui/layout'
 const ProductCard: React.FC = () => {
   return (
     <VStack
+      p="0"
       m="0"
       mx="auto"
-      maxW={{ base: '220px', md: '300px' }}
-      size="4xl"
-      textAlign="center"
       // border="2px"
-      p="0"
+      textAlign="center"
       justifyContent="center"
+      w={{ base: '220px', md: '300px' }}
+      h={{ base: '320px', md: '380px' }}
     >
       <Img
+        alt="product"
+        src="/burger.png"
+        objectFit="fill"
         boxSize={{ base: '100px', md: '200px' }}
         maxBlockSize={{ base: '100px', md: '200px' }}
-        objectFit="fill"
-        src="/burger.png"
-        alt="product"
       />
       <Heading size="lg">Super Triple Burger</Heading>
-      <Text maxW="200px">
+      <Text w="full" h="full" lineHeight="5">
         3 hamburgueres, alface, queijo, molho especial, cebola picles em um pão
         com gergelim
       </Text>
