@@ -11,9 +11,11 @@ const ProductCard: React.FC = () => {
       textAlign="center"
       // border="2px"
       p="0"
+      justifyContent="center"
     >
       <Img
         boxSize={{ base: '100px', md: '200px' }}
+        maxBlockSize={{ base: '100px', md: '200px' }}
         objectFit="fill"
         src="/burger.png"
         alt="product"

@@ -17,7 +17,7 @@ const MenuTemplate = () => {
         backgroundColor="whiteAlpha.900"
         w="100%"
         h="100%"
-        py={{ base: '5px', md: '5px' }}
+        // py={{ base: '5px', md: '5px' }}
         px={{ base: '5px', md: '10px' }}
         align={{ base: 'start', md: 'center' }}
       >
@@ -43,7 +43,7 @@ const MenuTemplate = () => {
           columns={{ base: 1, md: 2, lg: 3 }}
           maxH="100%"
           h="100vh"
-          spacing="20px"
+          spacing={{ base: '40px', md: '20px' }}
           aria-label="grid produtos"
           overflowY="auto"
           // paddingTop={{ base: '10px', md: '0' }}

@@ -1,6 +1,6 @@
 import { Button, VStack, Text } from '@chakra-ui/react'
 
-type MenuButtonProps = {
+export type MenuButtonProps = {
   title: string
   icon: React.ReactNode
 }

@@ -23,6 +23,7 @@ const BaseTemplate = ({
         centerContent
         h={{ base: '100%', md: '100vh' }}
         p="0"
+        // overflow="hidden"
       >
         {children}
       </Container>
