@@ -1,12 +1,6 @@
-import { VStack } from '@chakra-ui/layout'
 import { HStack, SimpleGrid } from '@chakra-ui/react'
-import MenuButton from 'components/Menu/Button'
-import BeveragesIcon from 'components/Menu/Icons/Beverages'
-import BurgerIcon from 'components/Menu/Icons/Burgers'
-import CombosIcon from 'components/Menu/Icons/Combos'
-import DessertsIcon from 'components/Menu/Icons/Desserts'
-import SidesIcon from 'components/Menu/Icons/Sides'
 import ProductCard from 'components/ProductCard'
+import SideMenu from 'components/SideMenu'
 import Base from 'templates/Base'
 
 const MenuTemplate = () => {
@@ -21,22 +15,7 @@ const MenuTemplate = () => {
         px={{ base: '5px', md: '10px' }}
         align={{ base: 'start', md: 'center' }}
       >
-        <VStack
-          aria-label="menu lateral"
-          maxW="200px"
-          maxH="90%"
-          h={{ base: '100%', md: 'full' }}
-          position={{ base: 'sticky' }}
-          // border="2px"
-          // borderColor="red.400"
-        >
-          <MenuButton title="Combos" icon={<CombosIcon />} />
-          <MenuButton title="Burgers" icon={<BurgerIcon />} />
-          <MenuButton title="Sides" icon={<SidesIcon />} />
-          <MenuButton title="Beverages" icon={<BeveragesIcon />} />
-          <MenuButton title="Desserts" icon={<DessertsIcon />} />
-        </VStack>
-
+        <SideMenu />
         <SimpleGrid
           // p={{ base: '2px', md: '10px' }}
           w="full"

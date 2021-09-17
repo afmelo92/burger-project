@@ -6,7 +6,7 @@ import BurgerIcon from '../Icons/Burgers'
 
 export default {
   component: Button,
-  title: 'Components/Button',
+  title: 'Components/SideMenu/Button',
   args: {
     title: 'Menu Button',
     icon: <BurgerIcon />
