@@ -1,24 +1,26 @@
-import { HStack } from '@chakra-ui/react'
+import { HStack, Fade } from '@chakra-ui/react'
 import ProductsGrid from 'components/ProductsGrid'
 import SideMenu from 'components/SideMenu'
-import Base from 'templates/Base'
+import BaseTemplate from 'templates/Base'
 
 const MenuTemplate = () => {
   return (
-    <Base>
-      <HStack
-        aria-label="menu"
-        backgroundColor="whiteAlpha.900"
-        w="100%"
-        h="100%"
-        py={{ base: '5px', md: '5px' }}
-        px={{ base: '5px', md: '10px' }}
-        align={{ base: 'start', md: 'center' }}
-      >
-        <SideMenu />
-        <ProductsGrid />
-      </HStack>
-    </Base>
+    <Fade in={true}>
+      <BaseTemplate>
+        <HStack
+          aria-label="menu"
+          backgroundColor="white"
+          w="100%"
+          h="100%"
+          py={{ base: '5px', md: '5px' }}
+          px={{ base: '5px', md: '10px' }}
+          align={{ base: 'start', md: 'center' }}
+        >
+          <SideMenu />
+          <ProductsGrid />
+        </HStack>
+      </BaseTemplate>
+    </Fade>
   )
 }
 
