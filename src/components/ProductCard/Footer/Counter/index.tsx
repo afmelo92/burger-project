@@ -1,4 +1,4 @@
-import { TriangleDownIcon, TriangleUpIcon } from '@chakra-ui/icons'
+import { AddIcon, MinusIcon } from '@chakra-ui/icons'
 import { HStack, Button, Input } from '@chakra-ui/react'
 import { useState } from 'react'
 
@@ -18,7 +18,7 @@ const Counter: React.FC = () => {
       <Button
         onClick={handleSubtractButton}
         iconSpacing="0"
-        leftIcon={<TriangleDownIcon />}
+        leftIcon={<MinusIcon />}
         textColor="blackAlpha.800"
       />
       <Input
@@ -33,7 +33,7 @@ const Counter: React.FC = () => {
       <Button
         onClick={handleAddButton}
         iconSpacing="0"
-        leftIcon={<TriangleUpIcon />}
+        leftIcon={<AddIcon />}
         textColor="blackAlpha.800"
       />
     </HStack>
