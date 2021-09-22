@@ -12,13 +12,14 @@ const ProductCard: React.FC = () => {
         as="a"
         cursor="pointer"
         // backgroundColor="red.500"
-        border={{ base: '1px', md: 'none' }}
+        // border={{ base: '1px', md: 'none' }}
         borderRadius={{ base: '10px', md: 'none' }}
-        borderColor={{ base: 'gray.300', md: 'none' }}
+        // borderColor={{ base: 'gray.300', md: 'none' }}
         textAlign="center"
         justifyContent="center"
         w={{ base: '220px', md: '300px' }}
         h={{ base: '320px', md: '380px' }}
+        boxShadow={{ base: 'md', md: 'none' }}
       >
         <Img
           alt="product"
