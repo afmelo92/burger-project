@@ -1,3 +1,4 @@
 !.storybook
 !.jest
 node_modules
+/cms/burger-project/node_modules

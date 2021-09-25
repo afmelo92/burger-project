@@ -14,11 +14,13 @@
     "storybook:build": "build-storybook -s ./public"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.6.7",
     "@chakra-ui/icons": "^1.0.15",
+    "@chakra-ui/react": "^1.6.7",
+    "@directus/sdk": "^9.0.0-rc.94",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@fontsource/nunito": "^4.5.0",
+    "axios": "^0.21.4",
     "framer-motion": "^4",
     "next": "11.1.2",
     "next-pwa": "^5.3.1",
@@ -36,6 +38,7 @@
     "@storybook/react": "^6.3.8",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.0",
+    "@types/axios": "^0.14.0",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.9.1",
     "@types/react": "17.0.21",

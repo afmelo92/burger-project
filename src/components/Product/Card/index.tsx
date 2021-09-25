@@ -2,9 +2,19 @@ import { Img } from '@chakra-ui/image'
 import { Heading, Text, VStack } from '@chakra-ui/layout'
 import Link from 'next/link'
 
-const ProductCard: React.FC = () => {
+type ProductCardProps = {
+  name: string
+  description: string
+  image: string
+}
+
+const ProductCard: React.FC<ProductCardProps> = ({
+  name,
+  description,
+  image
+}) => {
   return (
-    <Link href="/products/item" passHref>
+    <Link href={`/products/${name}`} passHref>
       <VStack
         p="2"
         m="0"
@@ -23,15 +33,14 @@ const ProductCard: React.FC = () => {
       >
         <Img
           alt="product"
-          src="/burger.png"
-          objectFit="fill"
+          src={`http://localhost:8055/assets/${image}`}
+          objectFit="contain"
           boxSize={{ base: '100px', md: '200px' }}
           maxBlockSize={{ base: '100px', md: '200px' }}
         />
-        <Heading size="lg">Super Triple Burger</Heading>
+        <Heading size="lg">{name}</Heading>
         <Text w="full" h="full" lineHeight="5">
-          3 hamburgueres, alface, queijo, molho especial, cebola picles em um
-          pão com gergelim
+          {description}
         </Text>
       </VStack>
     </Link>

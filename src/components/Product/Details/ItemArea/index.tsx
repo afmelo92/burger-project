@@ -1,6 +1,18 @@
 import { Heading, VStack, Image, Text } from '@chakra-ui/react'
 
-const ItemArea: React.FC = () => {
+type ItemAreaProps = {
+  category: string
+  name: string
+  description: string
+  image: string
+}
+
+const ItemArea: React.FC<ItemAreaProps> = ({
+  category,
+  description,
+  image,
+  name
+}) => {
   return (
     <VStack
       // h="full"
@@ -25,7 +37,7 @@ const ItemArea: React.FC = () => {
           mb={{ base: '1', md: '3' }}
           aria-label="product header category"
         >
-          Burgers
+          {category}
         </Heading>
         <Heading
           fontSize={{ base: '2xl', md: '4xl' }}
@@ -33,13 +45,13 @@ const ItemArea: React.FC = () => {
           lineHeight="1"
           aria-label="product header name"
         >
-          Super Triple Burger
+          {name}
         </Heading>
       </VStack>
 
       <Image
         p="2"
-        src="/burger.png"
+        src={`http://localhost:8055/assets/${image}`}
         objectFit="contain"
         maxH={{ base: '220px', md: '250px', lg: '320px' }}
         alt="super triple burger"
@@ -54,8 +66,7 @@ const ItemArea: React.FC = () => {
         textAlign="center"
         // border="2px"
       >
-        3 hamburgueres, alface, queijo, molho especial, cebola picles em um pão
-        com gergelim
+        {description}
       </Text>
     </VStack>
   )
