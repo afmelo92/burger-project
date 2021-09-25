@@ -1,8 +1,6 @@
 import { Directus } from '@directus/sdk'
 import type { GetStaticPaths, GetStaticProps } from 'next'
-import ProductsItemTemplate, {
-  ProductsItemTemplatePageProps
-} from 'templates/Products/Item'
+import MenuTemplate, { MenuTemplatePageProps } from 'templates/Menu'
 
 export type Product = {
   id: number
@@ -24,8 +22,8 @@ type Collections = {
   products: Product
 }
 
-export default function Item(props: ProductsItemTemplatePageProps) {
-  return <ProductsItemTemplate {...props} />
+export default function MenuPage(props: MenuTemplatePageProps) {
+  return <MenuTemplate {...props} />
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -38,8 +36,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const { data } = await directus.items('products').readMany()
 
-  const paths = data?.map(({ name }) => ({
-    params: { slug: name }
+  const paths = data?.map(({ category }) => ({
+    params: { slug: category }
   }))
 
   return {
@@ -59,7 +57,7 @@ export const getStaticProps: GetStaticProps = async ({ params = {} }) => {
   })
 
   const { data } = await directus.items('products').readMany({
-    filter: { name: { _eq: `${decodeURIComponent(slug as string)}` } }
+    filter: { category: { _eq: slug } }
   })
 
   // console.log({
@@ -76,7 +74,7 @@ export const getStaticProps: GetStaticProps = async ({ params = {} }) => {
   return {
     props: {
       slug,
-      product: data?.[0]
+      items: data
     } // will be passed to the page component as props
   }
 }

@@ -1,33 +1,17 @@
-import { VStack, Fade } from '@chakra-ui/react'
-import Footer from 'components/ProductCard/Footer'
-import Header from 'components/ProductCard/Header'
-import ItemArea from 'components/ProductCard/ItemArea'
-import Options from 'components/ProductCard/Options'
+import { Fade } from '@chakra-ui/react'
+import ProductDetails from 'components/Product/Details'
+import { Product } from 'pages/menu/[slug]'
 import BaseTemplate from 'templates/Base'
 
-const ProductsItemTemplate = () => {
+export type ProductsItemTemplatePageProps = {
+  product: Product
+}
+
+const ProductsItemTemplate = ({ product }: ProductsItemTemplatePageProps) => {
   return (
     <Fade in={true}>
       <BaseTemplate>
-        <VStack
-          // border="2px"
-          // borderColor="white"
-          h="full"
-          w="100%"
-          spacing="0"
-          position="relative"
-          aria-label="product page"
-          // justifyContent="space-between"
-          backgroundColor="white"
-        >
-          <Header />
-
-          <ItemArea />
-
-          <Options />
-
-          <Footer />
-        </VStack>
+        <ProductDetails product={product} />
       </BaseTemplate>
     </Fade>
   )

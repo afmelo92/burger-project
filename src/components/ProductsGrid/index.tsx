@@ -1,7 +1,12 @@
 import { SimpleGrid } from '@chakra-ui/react'
-import ProductCard from 'components/ProductCard'
+import ProductCard from 'components/Product/Card'
+import { Product } from 'pages/menu/[slug]'
 
-const ProductsGrid: React.FC = () => (
+type ProductsGridProps = {
+  products: Product[]
+}
+
+const ProductsGrid = ({ products }: ProductsGridProps) => (
   <SimpleGrid
     // p={{ base: '2px', md: '10px' }}
     w="full"
@@ -20,15 +25,14 @@ const ProductsGrid: React.FC = () => (
       }
     }}
   >
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
+    {products.map(product => (
+      <ProductCard
+        key={product.id}
+        name={product.name}
+        description={product.description}
+        image={product.image}
+      />
+    ))}
   </SimpleGrid>
 )
 

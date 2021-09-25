@@ -2,9 +2,15 @@ import { HStack, Fade } from '@chakra-ui/react'
 import Cart from 'components/Cart'
 import ProductsGrid from 'components/ProductsGrid'
 import SideMenu from 'components/SideMenu'
+import { Product } from 'pages/menu/[slug]'
 import BaseTemplate from 'templates/Base'
 
-const MenuTemplate = () => {
+export type MenuTemplatePageProps = {
+  slug: string
+  items: Product[]
+}
+
+const MenuTemplate = ({ items }: MenuTemplatePageProps) => {
   return (
     <Fade in={true}>
       <BaseTemplate>
@@ -18,7 +24,7 @@ const MenuTemplate = () => {
           align={{ base: 'start', md: 'center' }}
         >
           <SideMenu />
-          <ProductsGrid />
+          <ProductsGrid products={items} />
         </HStack>
         <Cart />
       </BaseTemplate>
