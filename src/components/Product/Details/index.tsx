@@ -1,5 +1,5 @@
 import { VStack } from '@chakra-ui/react'
-import { Product } from 'pages/menu/[slug]'
+import { Product } from 'pages/products/[slug]'
 
 import Footer from './Footer'
 import Header from './Header'
@@ -34,7 +34,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
 
       <Options extras={product.extra} />
 
-      <Footer />
+      <Footer price={product.price} />
     </VStack>
   )
 }

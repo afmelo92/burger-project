@@ -1,7 +1,9 @@
 import { HStack, Button, Heading } from '@chakra-ui/react'
+import { useCart } from 'hooks/use-cart'
 
 const Cart: React.FC = () => {
-  const cart = ['item 1']
+  const cart = [1]
+  const { total } = useCart()
 
   return (
     <HStack
@@ -21,7 +23,7 @@ const Cart: React.FC = () => {
       }}
     >
       <Heading fontSize={{ base: 'xl', md: '3xl' }} fontWeight="bold">
-        Total: R$1.209,90
+        Total: {total}
       </Heading>
       <Button
         p="6"

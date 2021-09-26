@@ -1,24 +1,7 @@
 import { Directus } from '@directus/sdk'
 import type { GetStaticPaths, GetStaticProps } from 'next'
-import { Extra } from 'pages/products/[slug]'
+import { Extra, Product } from 'pages/products/[slug]'
 import MenuTemplate, { MenuTemplatePageProps } from 'templates/Menu'
-
-export type Product = {
-  id: number
-  status: string
-  sort?: null
-  user_created: string
-  date_created: string
-  user_updated: string
-  date_updated: string
-  name: string
-  category: string
-  description: string
-  price: number
-  image: string
-  extras: Array<number>
-  extra: Extra[]
-}
 
 type Collections = {
   products: Product

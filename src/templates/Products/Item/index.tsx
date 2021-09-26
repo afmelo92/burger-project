@@ -1,6 +1,6 @@
 import { Fade } from '@chakra-ui/react'
 import ProductDetails from 'components/Product/Details'
-import { Product } from 'pages/menu/[slug]'
+import { Product } from 'pages/products/[slug]'
 import BaseTemplate from 'templates/Base'
 
 export type ProductsItemTemplatePageProps = {
