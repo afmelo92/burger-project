@@ -32,7 +32,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
         description={product.description}
       />
 
-      <Options />
+      <Options extras={product.extra} />
 
       <Footer />
     </VStack>

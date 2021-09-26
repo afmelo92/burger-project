@@ -35,4 +35,5 @@ yarn-error.log*
 
 # cms
 /cms/burger-project/node_modules
+/cms/burger-project/.env
 /cms/burger-project/uploads/**
