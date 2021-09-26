@@ -25,7 +25,7 @@ const HomeTemplate = () => {
 
           <Logo size="huge" />
 
-          <Link href="/menu" passHref>
+          <Link href="/menu/combos" passHref>
             <Button
               as="a"
               isFullWidth

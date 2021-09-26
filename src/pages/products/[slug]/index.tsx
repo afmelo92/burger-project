@@ -17,11 +17,21 @@ export type Product = {
   description: string
   price: number
   image: string
-  extras: Array<number>
+  extra: Extra[]
+}
+
+export type Extra = {
+  id: number
+  products_id: number
+  extra_id: {
+    name: string
+    price: number
+  }
 }
 
 type Collections = {
   products: Product
+  extra: Extra
 }
 
 export default function Item(props: ProductsItemTemplatePageProps) {
@@ -59,24 +69,14 @@ export const getStaticProps: GetStaticProps = async ({ params = {} }) => {
   })
 
   const { data } = await directus.items('products').readMany({
-    filter: { name: { _eq: `${decodeURIComponent(slug as string)}` } }
+    filter: { name: { _eq: `${decodeURIComponent(slug as string)}` } },
+    fields: '*,extra.*,extra.extra_id.name,extra.extra_id.price'
   })
-
-  // console.log({
-  //   data: products.data
-  //   // items: products.data,
-  //   // meta: products.meta,
-  //   // total: products?.meta?.total_count
-  // })
-
-  // const items = products.map(item => ({
-  //   id: item.id
-  // }))
 
   return {
     props: {
       slug,
       product: data?.[0]
-    } // will be passed to the page component as props
+    }
   }
 }
